@@ -1,0 +1,66 @@
+@import '../../myStyle.scss';
+
+.note-card-container{
+    background: white;
+    border-radius: 5px;
+    position: relative;
+
+    box-shadow: 0px 2px 15px 2px rgba(black,0.08);
+
+    &:hover{
+        cursor: pointer;
+        box-shadow: 1px 0px 0px 4px rgba(black,0.08);
+        .x-button{
+            opacity: 1;
+            transition-delay: 0.35s;
+        }
+    }
+
+    .note-card-content{
+        padding: 25px;
+
+        .note-card-title{
+            font-size: 18px;
+            font-weight: bold;
+            color:$purple;
+        }
+    }
+
+    .note-card-body{
+        position: relative;
+        color:#555;
+        max-height:75px;
+        overflow: hidden;
+
+        .fade-out-truncation{
+            position: absolute;
+            bottom: 0;
+            height: 50%;
+            width:100%;
+            background: linear-gradient(to bottom, rgba(white,0)0%, rgba(white,1));
+
+        }
+    }
+
+    .x-button{
+        position:absolute;
+        font-weight: bold;
+        color:$light-red;
+        top:12px; right: 12px;
+        height: 20px;
+        width:20px;
+
+        border-radius: 4px;
+
+        opacity: 0;
+
+        transition: opacity 0.2s ease-out;
+        transition-delay: 0.35s;
+
+        &:active{
+            color:darken($light-red,20%);
+        }
+    }
+
+}
+

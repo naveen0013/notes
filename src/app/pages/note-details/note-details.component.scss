@@ -1,0 +1,21 @@
+@import '../../../myStyle.scss';
+
+.add-edit-container{
+    display: flex;
+    flex-direction: column;
+
+    max-width: 500px;
+    margin: auto;
+    padding-top: 30px;
+    
+    input{
+        border: 1px solid lightgrey;
+        &:hover{
+            border:1px;
+        }
+    }
+    textarea{
+        height: 200px;
+        border: 1px solid lightgrey;
+    }
+}

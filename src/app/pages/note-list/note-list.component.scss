@@ -1,0 +1,21 @@
+@import '../../../myStyle.scss';
+
+.content-container{
+    display: flex;
+    flex-direction: column;
+
+    max-width: 500px;
+    margin: auto;
+    padding-top: 30px;
+}
+
+app-note-card{
+    display: block;
+    margin-bottom: 25px;
+}
+
+.search-box{
+    margin-bottom: 10px;
+    
+}
+

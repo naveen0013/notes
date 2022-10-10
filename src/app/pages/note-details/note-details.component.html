@@ -1,0 +1,16 @@
+<div class="add-edit-container">
+
+    <form #noteForm="ngForm" (ngSubmit)="onSubmit(noteForm)" >
+    <label for="title">title :</label>
+    <input class="input" type="text" id="title" name="title" [ngModel]="note.title" placeholder="enter title">
+    <label for="content">content :</label>
+    <textarea class="input" type="text" id="content" name="body" [ngModel]="note.body" placeholder="enter content"></textarea>
+    <br>
+    <br>
+    <button class="button is-primary" (click)="cancel()" >cancel</button>
+    &nbsp; &nbsp;
+
+    <button class="button is-link" type="submit" >save</button>
+
+    </form>
+</div>

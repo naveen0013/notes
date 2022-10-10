@@ -1,0 +1,26 @@
+<div class="content-container">
+    <div class="search-box">
+        <div class="field">
+            <p class="control has-icons-left">
+              <input class="input" type="text" (keyup)="filter(searched)"  [(ngModel)]="searched" placeholder="filter">
+              <span class="icon is-small is-left">
+                <i class="fa fa-search"></i>
+              </span>
+            </p>
+          </div>
+    </div>
+
+    <div class="cards-list">
+        <app-note-card *ngFor="let note of filteredNotes ; index as i;" 
+                              [link]="i"
+                              [title]="note.title"
+                              (delete)="deleteCard(i)"
+                                [body]="note.body" ></app-note-card>
+    </div>
+
+    <div class="add-button">
+      <div class="buttons">
+        <button class="button is-primary" routerLink="new" >+ Add Notes</button>
+      </div>
+    </div>
+</div>
